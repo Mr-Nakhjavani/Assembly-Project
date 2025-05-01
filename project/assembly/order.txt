@@ -1,0 +1,8 @@
+g++ -o pong project.cpp -lsfml-audio -lsfml-graphics -lsfml-window -lsfml-system -fopenmp -msse4
+
+
+
+
+
+nasm -f elf64 asm_functions.s -o asm_functions.o
+g++ -o pong_game project.cpp asm_functions.o -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio -fopenmp
